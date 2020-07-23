@@ -29,7 +29,8 @@ public class MyConsumer {
         properties.put("enable.auto.commit", true);
         consumer = new KafkaConsumer<>(properties);
         //指定topic
-        consumer.subscribe(Collections.singleton("kafka-study"));
+//        consumer.subscribe(Collections.singleton("kafka-study"));
+        consumer.subscribe(Collections.singleton("haiwan_chatroominteraction1"));
         try {
             while (true) {
                 boolean flag = true;

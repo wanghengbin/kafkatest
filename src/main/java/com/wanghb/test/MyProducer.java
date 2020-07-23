@@ -40,7 +40,8 @@ public class MyProducer {
         String str = "{\"uid\":\"hw15876580425695\",\"tickets\":10,\"propIds\":[62,62,67,68,62,68,62,60,67,68,10068],\"sign\":\"b3648c0e516549faaf65dc35eaa7bbe5\",\"_loginInfo\":null,\"roomUid\":\"hw15853761467553\",\"time\":1589874671302,\"type\":10}";
 //        String str = "{\"uid\":\"hw15876580425695\",\"tickets\":10,\"propIds\":[87],\"sign\":\"b3648c0e516549faaf65dc35eaa7bbe5\",\"_loginInfo\":null,\"roomUid\":\"hw15853761467553\",\"time\":1589874671302,\"type\":10}";
 //        String str = "{\"uid\":\"hw15876580425695\",\"tickets\":10,\"propIds\":[88],\"sign\":\"b3648c0e516549faaf65dc35eaa7bbe5\",\"_loginInfo\":null,\"roomUid\":\"hw15853761467553\",\"time\":1589874671302,\"type\":10}";
-        ProducerRecord<String, String> record = new ProducerRecord<>("haiwan_chatroominteraction", "tf_out_all_price", str);
+//        ProducerRecord<String, String> record = new ProducerRecord<>("haiwan_chatroominteraction1", "tf_out_all_price", str);
+        ProducerRecord<String, String> record = new ProducerRecord<>("test", "tf_out_all_price", str);
         RecordMetadata result = producer.send(record).get();
         System.out.println(result.topic());//imooc-kafka-study
         System.out.println(result.partition());//分区为0
